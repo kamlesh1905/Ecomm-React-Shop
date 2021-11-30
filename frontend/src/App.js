@@ -13,6 +13,9 @@ import ConfirmOrder from './components/cart/ConfirmOrder';
 import Payment from './components/cart/Payment'
 import OrderSuccess from './components/cart/OrderSuccess' 
 
+import ListOrders  from './components/order/ListOrders'
+import OrderDetails  from './components/order/OrderDetails'
+
 import ProtectedRoute from './components/route/ProtectedRoute';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
@@ -71,7 +74,9 @@ function App() {
                     <Route path="/password/reset/:token" component={NewPassword}/>
                     <ProtectedRoute path="/me" component={Profile} exact/>
                     <ProtectedRoute path="/me/update" component={UpdateProfile} exact/>
-                    <ProtectedRoute path="/password/update" component={UpdatePassword} exact/>    
+                    <ProtectedRoute path="/password/update" component={UpdatePassword} exact/>   
+                    <ProtectedRoute path="/orders/me" component={ListOrders} exact/>  
+                    <ProtectedRoute path="/order/:id" component={OrderDetails} exact/>  
                 </div>
                 <Footer/>
             </div>
