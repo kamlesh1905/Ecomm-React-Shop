@@ -24,6 +24,7 @@
         "mongoose": "^5.13.3",
         "nodemailer": "^6.6.3",
         "rc-slider": "^9.7.4",
+        "stripe": "^8.191.0",
         "validator": "^13.6.0"
     },
     "devDependencies": {
