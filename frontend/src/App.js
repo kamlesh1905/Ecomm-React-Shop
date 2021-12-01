@@ -25,6 +25,8 @@ import UpdatePassword from './components/user/UpdatePasword';
 import ForgotPassword from './components/user/ForgotPassword';
 import NewPassword from './components/user/NewPassword';
 
+import Dashboard from './components/admin/Dashboard';
+
 import {loadUser} from './actions/userActions'
 import store from './store'
 import axios from 'axios';
@@ -76,8 +78,9 @@ function App() {
                     <ProtectedRoute path="/me/update" component={UpdateProfile} exact/>
                     <ProtectedRoute path="/password/update" component={UpdatePassword} exact/>   
                     <ProtectedRoute path="/orders/me" component={ListOrders} exact/>  
-                    <ProtectedRoute path="/order/:id" component={OrderDetails} exact/>  
+                    <ProtectedRoute path="/order/:id" component={OrderDetails} exact/>   
                 </div>
+                <ProtectedRoute path="/dashboard" isAdmin={true} component={Dashboard} exact/> 
                 <Footer/>
             </div>
         </Router>
